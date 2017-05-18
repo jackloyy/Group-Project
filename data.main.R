@@ -8,6 +8,8 @@ usa.data <- tourism.data %>% select(X, X.11)
 
 # create dataset of monthly visit
 usa.monthly <- usa.data %>% filter(row_number() >= 5, row_number() <= 259)
+colnames(usa.monthly) <- c("Months", "Total")
 
 #creat dataset of annual visit
 usa.annual <- usa.data %>% filter(row_number() >= 266, row_number() <= 292)
+colnames(usa.annual) <- c("Years", "Total")
