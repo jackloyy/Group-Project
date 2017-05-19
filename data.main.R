@@ -7,7 +7,7 @@ tourism.data <- read.csv('data/JTM_inbound20170421eng.csv', stringsAsFactors=FAL
 usa.data <- tourism.data %>% select(X, X.11)
 
 # Creates dataset of monthly visits
-usa.monthly <- usa.data %>% filter(row_number() >= 5, row_number() <= 259) %>% mutate(Years = as.integer(1996 + ((row_number() - 1) / 12)))
+usa.monthly <- usa.data %>% filter(row_number() >= 5, row_number() <= 256) %>% mutate(Years = as.integer(1996 + ((row_number() - 1) / 12)))
 colnames(usa.monthly) <- c("Months", "Total", "Years")
 # Removes years from Months column
 i <- 1
@@ -16,6 +16,6 @@ while(i < nrow(usa.monthly)) {
   i = i + 12;
 }
 
-# Creates dataset of annual visits
+# Creates dataset of annual visits (1996 - 2016)
 usa.annual <- usa.data %>% filter(row_number() >= 266, row_number() <= 292)
 colnames(usa.annual) <- c("Years", "Total")
