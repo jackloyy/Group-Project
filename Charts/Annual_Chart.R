@@ -1,5 +1,6 @@
 library(plotly)
 
+library(ggplot2)
 # Group Project
 library(dplyr)
 
@@ -11,20 +12,19 @@ usa.data <- tourism.data %>% select(X, X.11)
 #creat dataset of annual visit
 usa.annual <- usa.data %>% filter(row_number() >= 266, row_number() <= 292)
 colnames(usa.annual) <- c("Years", "Total")
-View(usa.annual)
 
-usa.annual.graph <- function(data.annual) {
 
+usa.annual.graph <- function(data.annual, year) {
   
+  graph.data <- data.annual %>% filter(Years == year - 1 | Years == year - 2 | Years == year + 1 | Years == year + 2) 
+  # Stores and chops off the commas in the numbers
+  total <- as.numeric(gsub(",", "", graph.data$Total));
+  #create a yearly chart
+  Yearly.chart <- plot_ly(graph.data, x = ~Years, y = ~total, type = 'scatter', mode = 'lines', color = 'red') %>% 
+    layout(title = paste("Yearly Visits from US in", year))
   
+  Yearly.chart
   
-  x <- c(1990:2016)
-  y <- rnorm(data.annual$Total, mean = 70000)
-  data <- data.frame(x, y)
-  
-  p <- plot_ly(data, x = ~x, y = ~y, type = 'scatter', mode = 'lines')
-  
-  p
 }
 
-usa.annual.graph(usa.annual)
+# Eg : usa.annual.graph(usa.annual, 2009)
