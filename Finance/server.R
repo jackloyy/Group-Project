@@ -1,3 +1,19 @@
+
+library(dplyr)
+library(shiny)
+
+library(plotly)
+
+
+tourism.data <- read.csv('Data/JTM_inbound20170421eng.csv', stringsAsFactors=FALSE)
+
+# Select date(X) and country columns(X.11)
+usa.data <- tourism.data %>% select(X, X.11)
+
+# Creates dataset of annual visits (1996 - 2016)
+usa.annual <- usa.data %>% filter(row_number() >= 266, row_number() <= 292)
+colnames(usa.annual) <- c("Years", "Total")
+
 # Displays a multiple axes chart given data.annual (dataset) and the type of financial information, typeFinance
 financial.annual.chart <- function(data.annual, typeFinance) {
   # Reads in the financial datasets
@@ -40,3 +56,17 @@ financial.annual.chart <- function(data.annual, typeFinance) {
   
   return (p)
 }
+
+shinyServer(function(input, output) {
+  
+  output$LinePlot <- renderPlot({
+    
+    if(input$select == 1) {
+      financial.annual.chart(usa.annual, "currency")
+    } else {
+      financial.annual.chart(usa.annual, "income")
+    }
+    
+  })
+  
+})
