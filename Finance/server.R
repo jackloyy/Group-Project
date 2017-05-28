@@ -29,7 +29,7 @@ financial.annual.chart <- function(data.annual, typeFinance) {
   
   financial.total <- ""
   financial.type <- ""
-  # Initializes the type of financial information specified
+  # Initializes the type of financial information  specified
   if(typeFinance == "currency") {
     financial.total <- currency.total
     financial.type <- "Currency"

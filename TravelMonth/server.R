@@ -32,7 +32,7 @@ cum.month.chart <- function(data.month) {
   return (cum.monthly.chart)
 }
 
-# Define server logic required to draw a histogram
+
 shinyServer(function(input, output) {
    
   output$distPlot <- renderPlot({
