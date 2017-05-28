@@ -8,6 +8,7 @@ shinyServer(function(input, output) {
   tourism.data <- read.csv('Data/JTM_inbound20170421eng.csv')
   
   # Select date(X) and country columns(X.11)
+  
   usa.data <- tourism.data %>% select(X, X.11)
   
   #creat dataset of annual visit
