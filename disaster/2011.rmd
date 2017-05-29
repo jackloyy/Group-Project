@@ -12,6 +12,17 @@ In 2011, **the Great East Japan earthquake** happened near the northeast coast o
 
 ![Fukushima Daiichi after tsunami](http://media.oregonlive.com/oregonian/photo/2011/03/9434894-essay.jpg)
 
+
+```{r, echo=FALSE, message=FALSE, warning= FALSE}
+
+setwd('..')
+source('Charts/Annual_Chart.R')
+usa.annual.graph(usa.annual, 2011)
+
+```
+
+
+
 The chart of annual visits around 2011 shows the visitor in 2011 had a substantial drop. However, the drawback only least for one year, and visitor began to rise again.
 
 

@@ -12,6 +12,14 @@ In 1995, **the Great Hanshin earthquake** happened 12mi away from the city of Ko
 
 ![Damage at Minatogawa, Kobe](https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Hanshin-Awaji_earthquake_1995_343.jpg/1024px-Hanshin-Awaji_earthquake_1995_343.jpg)
 
+```{r, echo=FALSE, message=FALSE, warning= FALSE}
+
+setwd('..')
+source('Charts/Annual_Chart.R')
+usa.annual.graph(usa.annual, 1995)
+
+```
+
 From the annually visits around 1995, we can see the earthquake in 1995 did not decrease the number of visitors in the next few years. Instead, the number of visitors kept growing
 
 

@@ -17,7 +17,7 @@ shinyUI(fluidPage(
     condition = "2011 == ture",
     fluidRow(
       column(8,
-             includeMarkdown("2011.md")
+             includeMarkdown("2011.html")
       )
     )
   ),
@@ -27,7 +27,7 @@ shinyUI(fluidPage(
     condition = "1995 == true",
     fluidRow(
       column(8,
-             includeMarkdown("1995.md")
+             includeMarkdown("1995.html")
       )
     )
   ),
