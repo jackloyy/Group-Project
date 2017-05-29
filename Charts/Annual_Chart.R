@@ -1,7 +1,5 @@
 library(plotly)
-
 library(ggplot2)
-# Group Project
 library(dplyr)
 
 tourism.data <- read.csv('data/JTM_inbound20170421eng.csv')
@@ -21,9 +19,9 @@ usa.annual.graph <- function(data.annual, year) {
   total <- as.numeric(gsub(",", "", graph.data$Total));
   #create a yearly chart
   Yearly.chart <- plot_ly(graph.data, x = ~Years, y = ~total, type = 'scatter', mode = 'lines', color = 'red') %>% 
-    layout(title = paste("Yearly Visits from US in", year))
+    layout(title = paste("Annualy Visits from US in", year))
   
-  Yearly.chart
-  
+ return(Yearly.chart)
 }
+
 
