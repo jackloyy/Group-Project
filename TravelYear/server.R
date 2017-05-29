@@ -18,7 +18,7 @@ shinyServer(function(input, output) {
   
   usa.annual.graph <- function(data.annual, year) {
     
-    graph.data <- data.annual %>% filter(Years == year - 1 | Years == year - 2 | Years == year + 1 | Years == year + 2) 
+    graph.data <- data.annual %>% filter(Years == year - 1 | Years == year - 2 | Years == year + 1 | Years == year + 2 | Years == year) 
     # Stores and chops off the commas in the numbers
     total <- as.numeric(gsub(",", "", graph.data$Total));
     #create a yearly chart

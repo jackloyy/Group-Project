@@ -10,7 +10,27 @@ shinyUI(fluidPage(
   selectInput("select", label = h2("Select Natural disaster"), 
               choices = list("2011 Earthquake" = 1, "1995 Earthquake" = 2), 
               selected = 1),
+  checkboxInput("1995","1995"), 
+  checkboxInput("2011","2011"),
+  conditionalPanel(
+    
+    condition = "2011 == ture",
+    fluidRow(
+      column(8,
+             includeMarkdown("2011.md")
+      )
+    )
+  ),
   
+  conditionalPanel(
+    
+    condition = "1995 == true",
+    fluidRow(
+      column(8,
+             includeMarkdown("1995.md")
+      )
+    )
+  ),
     
     # Show a plot of the generated distribution
     mainPanel(
