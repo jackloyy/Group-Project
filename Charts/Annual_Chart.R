@@ -27,4 +27,3 @@ usa.annual.graph <- function(data.annual, year) {
   
 }
 
-# Eg : usa.annual.graph(usa.annual, 2009)
