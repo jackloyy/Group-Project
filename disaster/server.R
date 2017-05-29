@@ -56,11 +56,11 @@ shinyServer(function(input, output) {
   output$LinePlot <- renderPlot({
   
       if(input$select == 1) {
-       usa.month.chart(usa.monthly, 2011)
-       #usa.annual.graph(usa.annual, 2011)
+       #usa.month.chart(usa.monthly, 2011)
+       usa.annual.graph(usa.annual, 2011)
       } else {
-        usa.month.chart(usa.monthly, 1995)
-       # usa.annual.graph(usa.annual,1995)
+       # usa.month.chart(usa.monthly, 1995)
+       usa.annual.graph(usa.annual,1995)
       }
     
   })
