@@ -32,13 +32,7 @@ usa.annual.graph <- function(data.annual, year) {
 
 shinyServer(function(input, output) {
 
-  # output$condPanel <- renderUI({
-  #   if (input$select == "2011") { 
-  #     includeMarkdown("2011.html")
-  #   }
-  #   print(input$select)
-  # })  
-  
+
   # observeEvent(
   #   input$select,
   #   insertUI("#html", "afterBegin", tabPanel("Markdown", fluidRow(
@@ -55,16 +49,17 @@ shinyServer(function(input, output) {
       includeHTML("1995.html")
     }
   })
-  # output$LinePlot <- renderPlot({
-  #     if(input$select == 1) {
-  #      # usa.month.chart(usa.monthly, 2011)
-  #      # usa.annual.graph(usa.annual, 2011)
-  #       print(input$select);
-  #     } else {
-  #      # usa.month.chart(usa.monthly, 1995)
-  #      # usa.annual.graph(usa.annual,1995)
-  #     }
-  # 
-  # })
+
+   # observeEvent(
+   #  input$select,
+   #   insertUI("#LinePlot", "afterBegin", tabPanel("HTML", fluidRow(
+   #     column(10, align = "center",
+   #           htmlOutput(paste0(input$select, ".html"))
+   #     )
+   #   )))
+   # )
+   # 
+
+
   
 })

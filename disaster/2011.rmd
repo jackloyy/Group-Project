@@ -5,9 +5,8 @@
 
 ```{r, echo=FALSE, message=FALSE, warning= FALSE}
 
-setwd('..')
-source('Charts/Annual_Chart.R')
-usa.annual.graph(usa.annual, 2011)
+source('../Charts/Annual_Chart.R')
+usa.annual.graph(2011)
 
 ```
 
