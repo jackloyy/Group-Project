@@ -1,0 +1,9 @@
+
+
+```{r, echo=FALSE, message=FALSE, warning= FALSE}
+
+setwd('..')
+source('Charts/Financ_Annual_Chart.R')
+financial.annual.chart(usa.annual, 'income')
+```
+

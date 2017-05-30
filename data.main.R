@@ -1,5 +1,6 @@
 # Group Project
 library(dplyr)
+library(plotly)
 
 tourism.data <- read.csv('Data/JTM_inbound20170421eng.csv', stringsAsFactors=FALSE)
 
