@@ -2,7 +2,7 @@
 library(dplyr)
 library(plotly)
 
-tourism.data <- read.csv('Data/JTM_inbound20170421eng.csv', stringsAsFactors=FALSE)
+tourism.data <- read.csv('../Data/JTM_inbound20170421eng.csv', stringsAsFactors=FALSE)
 
 # Select date(X) and country columns(X.11)
 usa.data <- tourism.data %>% select(X, X.11)
