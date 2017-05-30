@@ -2,7 +2,7 @@ earthquake.map <- function() {
   earthquake.data <- read.csv("../Data/earthquake_data.csv", stringsAsFactors=FALSE)
   
   g <- list(
-    scope = 'japan',
+    scope = 'asia',
     showframe = F,
     showland = T,
     landcolor = toRGB("grey90")

@@ -14,7 +14,7 @@ shinyUI(fluidPage(
 
     # Show a plot of the generated distribution
     column(8, mainPanel(width = 12,
-                        plotlyOutput("LinePlot"), 
+       plotlyOutput("LinePlot"), 
        htmlOutput("html", container = div)
       )
     )

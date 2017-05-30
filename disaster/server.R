@@ -1,7 +1,6 @@
 library(dplyr)
 library(shiny)
 library(plotly)
-# library(shinydashboard)
 
 tourism.data <- read.csv('Data/JTM_inbound20170421eng.csv', stringsAsFactors=FALSE)
 
@@ -12,8 +11,6 @@ usa.data <- tourism.data %>% select(X, X.11)
 # Creates dataset of annual visits (1996 - 2016)
 usa.annual <- usa.data %>% filter(row_number() >= 266, row_number() <= 292)
 colnames(usa.annual) <- c("Years", "Total")
-
-
 
 
 usa.annual.graph <- function(data.annual, year) {
