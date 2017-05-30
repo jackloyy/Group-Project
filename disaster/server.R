@@ -1,7 +1,7 @@
 library(dplyr)
 library(shiny)
 library(plotly)
-library(shinydashboard)
+# library(shinydashboard)
 
 tourism.data <- read.csv('Data/JTM_inbound20170421eng.csv', stringsAsFactors=FALSE)
 
@@ -30,16 +30,21 @@ usa.annual.graph <- function(data.annual, year) {
 }
 
 
-shinyServer(function(input, output) {
+shinyServer(function(session, input, output) {
 
-  output$LinePlot <- renderPlot({
+  # observeEvent(
+  #   input$select,
+  #   includeMarkdown(paste(input$select, ".html", sep=""))
+  # )
   
+  output$LinePlot <- renderPlot({
       if(input$select == 1) {
-       #usa.month.chart(usa.monthly, 2011)
-       usa.annual.graph(usa.annual, 2011)
+       # usa.month.chart(usa.monthly, 2011)
+       # usa.annual.graph(usa.annual, 2011)
+        print(input$select);
       } else {
        # usa.month.chart(usa.monthly, 1995)
-       usa.annual.graph(usa.annual,1995)
+       # usa.annual.graph(usa.annual,1995)
       }
     
   })

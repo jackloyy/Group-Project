@@ -1,5 +1,11 @@
-# Displays a multiple axes chart given data.annual (dataset) and the type of financial information, typeFinance
-financial.annual.chart <- function(data.annual, typeFinance) {
+# Displays a multiple axes chart given the type of financial information, typeFinance
+financial.annual.chart <- function(typeFinance) {
+  tourism.data <- read.csv('../Data/JTM_inbound20170421eng.csv', stringsAsFactors=FALSE)
+  # Select date(X) and country columns(X.11)
+  usa.data <- tourism.data %>% select(X, X.11)
+  # Creates dataset of annual visits (1996 - 2016)
+  data.annual <- usa.data %>% filter(row_number() >= 266, row_number() <= 292)
+  colnames(data.annual) <- c("Years", "Total")
   # Reads in the financial datasets
   currency <- read.csv('../Data/currency_rates.csv', stringsAsFactors=FALSE) %>% filter(Years != "2016")
   income <- read.csv('../Data/income.csv', stringsAsFactors=FALSE)
