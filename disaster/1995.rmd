@@ -8,6 +8,12 @@ source('Charts/Annual_Chart.R')
 usa.annual.graph(usa.annual, 1995)
 
 ```
+<<<<<<< HEAD
+=======
+
+
+>From the annually visits around 1995, we can see the earthquake in 1995 did not decrease the number of visitors in the next few years. Instead, the number of visitors kept growing
+>>>>>>> markdown
 
 From the annually visits around 1995, we can see the earthquake in 1995 did not decrease the number of visitors in the next few years. Instead, the number of visitors kept growing
 
