@@ -1,4 +1,5 @@
 # Great Hanshin earthquake, 1995
+***
 
 ```{r, echo=FALSE, message=FALSE, warning= FALSE}
 
@@ -8,9 +9,9 @@ usa.annual.graph(usa.annual, 1995)
 
 ```
 
->From the annually visits around 1995, we can see the earthquake in 1995 did not decrease the number of visitors in the next few years. Instead, the number of visitors kept growing
+From the annually visits around 1995, we can see the earthquake in 1995 did not decrease the number of visitors in the next few years. Instead, the number of visitors kept growing
 
-
+***
 
 ```
 Great Hanshin earthquake

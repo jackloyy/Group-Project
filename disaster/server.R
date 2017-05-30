@@ -41,9 +41,9 @@ shinyServer(function(session, input, output) {
   
   observeEvent(
     input$select,
-    insertUI("#LinePlot", "afterBegin", tabPanel("Markdown", fluidRow(
-      column(8, align = "center",
-             includeMarkdown(paste0(input$select, ".html"))
+    insertUI("#LinePlot", "afterBegin", tabPanel("HTML", fluidRow(
+      column(10, align = "center",
+             includeHTML(paste0(input$select, ".html"))
       )
     )))
   )

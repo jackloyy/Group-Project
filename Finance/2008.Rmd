@@ -1,9 +1,11 @@
-
+# Financial Crisis, 2008
+***
 
 ```{r, echo=FALSE, message=FALSE, warning= FALSE}
+library(dplyr)
+library(plotly)
 
-setwd('..')
-source('Charts/Financ_Annual_Chart.R')
-financial.annual.chart(usa.annual, 'income')
+source('../Charts/Financ_Annual_Chart.R')
+financial.annual.chart('income')
 ```
-
+From this doulbe axis chart of total visitors and national income pre capita, 

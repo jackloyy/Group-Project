@@ -1,6 +1,6 @@
 
 # Great East Japan earthquake, 2011
-
+***
 
 
 ```{r, echo=FALSE, message=FALSE, warning= FALSE}
@@ -13,8 +13,9 @@ usa.annual.graph(usa.annual, 2011)
 
 
 
->The chart of annual visits around 2011 shows the visitor in 2011 had a substantial drop. However, the drawback only least for one year, and visitor began to rise again.
+The chart of annual visits around 2011 shows the visitor in 2011 had a substantial drop. However, the drawback only least for one year, and visitor began to rise again.
 
+***
 
 ```
 Great East Japan earthquake
