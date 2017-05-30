@@ -39,14 +39,14 @@ shinyServer(function(session, input, output) {
   #   print(input$select)
   # })  
   
-  observeEvent(
+   observeEvent(
     input$select,
-    insertUI("#LinePlot", "afterBegin", tabPanel("HTML", fluidRow(
-      column(10, align = "center",
+     insertUI("#LinePlot", "afterBegin", tabPanel("HTML", fluidRow(
+       column(10, align = "center",
              includeHTML(paste0(input$select, ".html"))
-      )
-    )))
-  )
+       )
+     )))
+   )
   
   # output$LinePlot <- renderPlot({
   #     if(input$select == 1) {
