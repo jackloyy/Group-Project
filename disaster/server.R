@@ -50,6 +50,17 @@ shinyServer(function(input, output) {
     }
   })
 
+  
+  
+  output$LinePlot <- renderPlotly (
+    if(input$select == 2011) {
+      usa.annual.graph(usa.annual,2011)
+    } else {
+      usa.annual.graph(usa.annual,1995)
+    }
+  )
+  
+  
    # observeEvent(
    #  input$select,
    #   insertUI("#LinePlot", "afterBegin", tabPanel("HTML", fluidRow(
