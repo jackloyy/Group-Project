@@ -8,23 +8,22 @@ shinyUI(fluidPage(
   titlePanel("Natural Disaster related"),
   
   selectInput("select", label = h2("Select Natural disaster"), 
-              choices = list("2011 Earthquake" = 1, "1995 Earthquake" = 2)), 
+              choices = list("2011 Earthquake" = 2011, "1995 Earthquake" = 1995)), 
               # selected = 1),
-  # checkboxInput("1995","1995"), 
+  # checkboxInput("1995","1995"),
   # checkboxInput("2011","2011"),
   # conditionalPanel(
-  # 
-  #   "input.select == 1",
+  #    condition = "input.select == 2011",
   #   fluidRow(
   #     column(8,
-  #            includeMarkdown("2011.html")
+  #           includeMarkdown("2011.html")
   #     )
   #   )
   # ),
   # 
   # conditionalPanel(
   # 
-  #   "input.select == 2",
+  #   condition = "input.select == 1995",
   #   fluidRow(
   #     column(8,
   #            includeMarkdown("1995.html")
