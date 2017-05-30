@@ -15,4 +15,3 @@ earthquake.map <- function() {
     ) %>%
     layout(title = '1995 and 2011 Major Japanese Earthquakes Data', geo = g)
 }
-
