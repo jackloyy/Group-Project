@@ -1,5 +1,6 @@
 
 library(shiny)
+library(plotly)
 
 # Define UI for application that draws a histogram
 shinyUI(fluidPage(
@@ -12,32 +13,10 @@ shinyUI(fluidPage(
               choices = list("2011 Earthquake" = 2011, "1995 Earthquake" = 1995)))), 
 
   
-  
   mainPanel(
     plotlyOutput("LinePlot")
   ),
-              # selected = 1),
-  # checkboxInput("1995","1995"),
-  # checkboxInput("2011","2011"),
-  # conditionalPanel(
-  #    condition = "input.select == 2011",
-  #   fluidRow(
-  #     column(8,
-  #           includeMarkdown("2011.html")
-  #     )
-  #   )
-  # ),
-  # 
-  # conditionalPanel(
-  # 
-  #   condition = "input.select == 1995",
-  #   fluidRow(
-  #     column(8,
-  #            includeMarkdown("1995.html")
-  #     )
-  #   )
-  # ),
-    
+
     # Show a plot of the generated distribution
     column(8, mainPanel(width = 12,
        htmlOutput("html", container = div)
