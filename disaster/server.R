@@ -2,7 +2,7 @@ library(dplyr)
 library(shiny)
 library(plotly)
 
-source("../Charts/Annual_Chart.R")
+source("Annual_Chart.R")
 
 shinyServer(function(input, output) {
   output$html <- renderUI( {
