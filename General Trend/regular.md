@@ -11,3 +11,7 @@ February is significantly lower and any month in a year, which means attract vis
 For the tradition peak month like March, June and
 October, tourism industry can hire temporary works and advance at price to balance the capacity of tourists to
 maximize their profit.
+
+***
+
+![](https://i2.wp.com/lazytanuki.com/wp-content/uploads/2016/06/japan-fuji-lazytanuki-Fujiyoshida.jpg?w=1600)
