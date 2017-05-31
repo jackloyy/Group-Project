@@ -1,4 +1,4 @@
-
+library(plotly)
 library(shiny)
 
 shinyUI(fluidPage(
@@ -18,7 +18,7 @@ shinyUI(fluidPage(
     
     # Show a plot 
     mainPanel(
-       plotOutput("linePlot")
+       plotlyOutput("linePlot")
     )
   )
 ))

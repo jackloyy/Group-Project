@@ -1,5 +1,4 @@
 # Currency Exchange Rate, 2015
-
 ***
 
 This double axis chart shows the total visitors and currency exchange rates between USD and JPY. Between 2012 and 2015, USD appreciate **150%** to JPY and it boosts the tourist in this period. As a supplement factor, Tokyo was announced as the host for **2020 Olympic** in 2013, and the panic of nuclear crisis starts to fade.

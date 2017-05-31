@@ -2,7 +2,7 @@
 library(shiny)
 library(plotly)
 
-# Define UI for application that draws a histogram
+# Define UI for application that draws a plot
 shinyUI(fluidPage(
   
   # Application title

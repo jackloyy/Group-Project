@@ -2,33 +2,9 @@ library(dplyr)
 library(shiny)
 library(plotly)
 
-tourism.data <- read.csv('Data/JTM_inbound20170421eng.csv', stringsAsFactors=FALSE)
-
-# Select date(X) and country columns(X.11)
-usa.data <- tourism.data %>% select(X, X.11)
-
-
-# Creates dataset of annual visits (1996 - 2016)
-usa.annual <- usa.data %>% filter(row_number() >= 266, row_number() <= 292)
-colnames(usa.annual) <- c("Years", "Total")
-
-
-usa.annual.graph <- function(data.annual, year) {
-  
-  graph.data <- data.annual %>% filter(Years == year - 1 | Years == year - 2 | Years == year + 1 | Years == year + 2 | Years == year) 
-  # Stores and chops off the commas in the numbers
-  total <- as.numeric(gsub(",", "", graph.data$Total));
-
-  Yearly.chart <- plot_ly(graph.data, x = ~Years, y = ~total, type = 'scatter', mode = 'lines', color = 'red') %>% 
-    layout(title = paste("Yearly Visits from US in", year))
-  
-  Yearly.chart
-  
-}
-
+source("../Charts/Annual_Chart.R")
 
 shinyServer(function(input, output) {
-
   output$html <- renderUI( {
     if(input$select == 2011) {
       includeHTML("2011.html")
@@ -40,9 +16,9 @@ shinyServer(function(input, output) {
   
   output$LinePlot <- renderPlotly (
     if(input$select == 2011) {
-      usa.annual.graph(usa.annual,2011)
+      usa.annual.graph(2011)
     } else {
-      usa.annual.graph(usa.annual,1995)
+      usa.annual.graph(1995)
     }
   )
   
