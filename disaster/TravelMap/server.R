@@ -2,7 +2,7 @@ library(shiny)
 library(plotly)
 library(dplyr)
 
-source("../../Charts/earthquake_map.R")
+source("earthquake_map.R")
 
 shinyServer(function(input, output) {
     

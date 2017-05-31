@@ -4,7 +4,7 @@ library(shiny)
 library(plotly)
 
 
-source("../Charts/Financ_Annual_Chart.R")
+source("Financ_Annual_Chart.R")
 
 shinyServer(function(input, output) {
   
