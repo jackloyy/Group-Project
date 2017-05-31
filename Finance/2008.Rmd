@@ -13,4 +13,6 @@ financial.annual.chart('income')
 
 From this double axis chart of total visitors and national income pre capita, we can see there is a positive correlation between this two index around 2008. We can see the visits starts to increase again after 2009, but the **Great East Japan earthquake** in 2011 stop the upper tendency.
 
+![Bankrupt of an investment bank](http://static1.businessinsider.com/image/56a8e95a58c32397008b5943/one-of-the-biggest-warning-signs-of-the-financial-crisis-is-flashing-again--but-this-time-is-different.jpg)
+
 Resource: Work Bank
