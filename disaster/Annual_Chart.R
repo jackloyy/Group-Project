@@ -2,6 +2,7 @@ library(plotly)
 library(ggplot2)
 library(dplyr)
 
+# Displays a chart of annual visits from US to Japan based on a given year
 usa.annual.graph <- function(year) {
   tourism.data <- read.csv('Data/JTM_inbound20170421eng.csv', stringsAsFactors=FALSE)
   # Select date(X) and country columns(X.11)

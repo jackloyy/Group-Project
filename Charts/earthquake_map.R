@@ -1,3 +1,4 @@
+# Displays a map of Japanese major earthquakes
 earthquake.map <- function() {
   earthquake.data <- read.csv("../Data/earthquake_data.csv", stringsAsFactors=FALSE)
   

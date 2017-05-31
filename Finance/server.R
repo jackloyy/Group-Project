@@ -7,6 +7,7 @@ source("Financ_Annual_Chart.R")
 
 shinyServer(function(input, output) {
   
+  # Outputs html UI based on input's select value
   output$html <- renderUI( {
     if(input$select == 1) {
       includeHTML("2015.html")
@@ -15,6 +16,7 @@ shinyServer(function(input, output) {
     }
   })
   
+  # Outputs plot based on output's lineplot value
   output$LinePlot <- renderPlotly({
     
     if(input$select == 1) {

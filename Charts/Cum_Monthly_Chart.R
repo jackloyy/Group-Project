@@ -1,4 +1,4 @@
-# Displays a chart given a dataset of monthly data
+# Displays a chart of monthly US visits to Japan given a dataset of monthly data
 cum.month.chart <- function(data.month) {
   cum.month.data <- data.month %>% group_by(Months) %>% summarise(avg_visit = mean(as.numeric(gsub(",", "", trimws(Total)))))
   # Sort the data frame in chronological order based on the Months column

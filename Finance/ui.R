@@ -10,7 +10,7 @@ shinyUI(fluidPage(
   column(4, wellPanel(selectInput("select", label = h2("Select Financial Factor"), 
               choices = list("Currency" = 1, "Income" = 2)))), 
   
-  # Show a plot of the generated distribution
+  # Shows a plot and html doc supporting the application
   column(8, mainPanel(width = 12, 
     plotlyOutput("LinePlot"), 
     htmlOutput("html", container = div)
