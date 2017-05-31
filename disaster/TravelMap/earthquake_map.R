@@ -1,5 +1,5 @@
 earthquake.map <- function() {
-  earthquake.data <- read.csv("../Data/earthquake_data.csv", stringsAsFactors=FALSE)
+  earthquake.data <- read.csv("Data/earthquake_data.csv", stringsAsFactors=FALSE)
   
   g <- list(
     scope = 'asia',

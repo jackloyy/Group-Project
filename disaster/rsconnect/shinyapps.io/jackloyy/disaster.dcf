@@ -2,9 +2,10 @@ name: disaster
 title: disaster
 account: jackloyy
 server: shinyapps.io
-appId: 184863
-bundleId: 846432
+appId: 184898
+bundleId: 846584
 url: https://jackloyy.shinyapps.io/disaster/
-when: 1496188997.57314
+when: 1496198133.38967
 asMultiple: FALSE
 asStatic: FALSE
+ignoredFiles: TravelMap/.DS_Store|TravelMap/.RData|TravelMap/.Rhistory|TravelMap/earthquake_map.R|TravelMap/server.R|TravelMap/ui.R|TravelMap/Data/earthquake_data.csv|TravelMap/rsconnect/shinyapps.io/jackloyy/TravelMap.dcf
